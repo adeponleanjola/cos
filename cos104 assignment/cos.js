@@ -23,14 +23,11 @@ function calculate(num1, num2, sign) {
 }
 
 function runningCalculator() {
-    console.log("Calculator");
-    
-    const num1 = prompt("Enter the first number: ");
-    const operation = prompt("Enter the operation (+, -, *, ^, %): ");
-    const num2 = prompt("Enter the second number: ");
+    const num1 = document.getElementById('num1').value;
+    const operation = document.getElementById('operation').value;
+    const num2 = document.getElementById('num2').value;
+    const resultDiv = document.getElementById('result');
 
     const result = calculate(num1, num2, operation);
-    alert(`The result is: ${result}`);
+    resultDiv.textContent = `The result is: ${result}`;
 }
-
-runningCalculator();
